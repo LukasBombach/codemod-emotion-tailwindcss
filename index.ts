@@ -1,10 +1,15 @@
-import { Project } from "ts-morph";
+import { Project, ts } from "ts-morph";
 
 const project = new Project({
   tsConfigFilePath: "./tsconfig.json",
 });
-const file = project.getSourceFileOrThrow("fixtures/ArticleBody.style.tsx");
+const sourceFile = project.getSourceFileOrThrow("fixtures/ArticleBody.style.tsx");
+
+const emotionReact = sourceFile.getImportDeclaration("@emotion/react");
+const namedImports = emotionReact.getNamedImports();
+const [probablyCss] = namedImports;
+
+const usages = probablyCss.getNameNode().findReferencesAsNodes();
+console.log(usages);
 
 debugger;
-
-console.log(file);
