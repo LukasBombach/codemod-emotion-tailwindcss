@@ -1,0 +1,65 @@
+# compiled output
+dist
+out
+node_modules
+.terraform
+.cache
+
+# TypeScript
+*.tsbuildinfo
+
+# Next.js build output
+.next
+apps/web/out
+# dotenv environment variables file
+.env
+# nextjs uses a different strategy
+.env*.local
+!apps/web/.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# OS
+.DS_Store
+
+# Tests
+coverage
+.nyc_output
+
+# IDEs and editors
+/.idea
+*.iml
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# yarn 2
+.yarn/*
+!.yarn/plugins
+!.yarn/releases
+
+# Test related logs
+.jest-test-results.json
+
+# Sitespeed.io
+/sitespeed-result/
+/.config/sitespeed/mobile.conf.json
+
+# Turborepo
+.turbo
